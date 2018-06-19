@@ -556,7 +556,7 @@ String SITE_SELECTID = "SELECT CompanyId FROM CompanyTable WHERE EmailId = ? OR 
 String SITE_INSERTEMPLOYEE = "INSERT INTO EmployeeTable(CompanyId,EmployeeId,FirstName,LastName,DOB,EmailId,MobileNo,Address,Type,Role,Department)VALUES(?,?,?,?,?,?,?,?,'Permanent','Propertier','Admin' )";
 
 
-String SITE_INSERTEMPLOYEE_CONFIG = "INSERT INTO EmployeeConfig (CompanyId,Role,Permission)values(? , 'Propertier' ,'attendance,chart,maintenance,report,attendanceRegulation,taskMapping,supervisorAuthority,avoidAttendanceTracking')";
+String SITE_INSERTEMPLOYEE_CONFIG = "INSERT INTO EmployeeConfig (CompanyId,Role,Permission)values( ? , 'Propertier' ,'attendance,chart,maintenance,report,attendanceRegulation,taskMapping,supervisorAuthority,avoidAttendanceTracking')";
 
 String SITE_SHIFT_INSERT="Insert Into ShiftConfig (CompanyId,ShiftType) values(?,1)";
 
@@ -564,7 +564,9 @@ String CREATE_TABLE_HOLIDAY = "CREATE TABLE $tableName( dt DATE NOT NULL PRIMARY
 		+ "y SMALLINT NULL,q tinyint NULL, m tinyint NULL,d tinyint NULL,"
 		+ "dw tinyint NULL,monthName VARCHAR(9) NULL,dayName VARCHAR(9) NULL,"
 		+ "w tinyint NULL,isWeekday BINARY(1) NULL,isHoliday BINARY(1) NULL,"
-		+ "holidayDescr VARCHAR(32) NULL,isPayday BINARY(1) NULL)";
+		+ "holidayDescr VARCHAR(32) NULL,isPayday BINARY(1) NULL,"
+		+ "Shift1 varchar(7),Shift2 varchar(7),Shift3 varchar(7),"
+		+ "HoliDayShift varchar(10))";
 
 String INSERT_HOLIDAYTABLE="INSERT INTO $tableName (dt) SELECT DATE( ? ) "
 		+ " + INTERVAL a.i*10000 + b.i*1000 + c.i*100 + d.i*10 + e.i DAY FROM ints a "

@@ -10,7 +10,6 @@ public class EmployeeLoginJSON {
 	private String password;
 	private String userName;
 	private String permission;
-	
 	private String employeeId;
 	private String companyId;
 	private String date;

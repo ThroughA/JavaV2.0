@@ -235,7 +235,6 @@ public class SiteRegisterLogic {
 		String Shift=IQueryConstants.SITE_SHIFT_INSERT;
 		PreparedStatement ShiftSt = connection.prepareStatement(Shift);
 		ShiftSt.setString(1,companyId);
-	
 		ShiftSt.executeUpdate();
 		System.out.println("CALLING FUNCTIONTO CREATE TABLE \n");
 		CreateTable(org,companyId);
