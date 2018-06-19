@@ -151,7 +151,7 @@ public class EmployeeLogic {
 	       	        		biometricValue=rs.getInt("BiometricValue");
 	       	        		shiftMode=rs.getInt("ShiftMode");
 	       	        	}
-					
+					System.out.println("bio"+biometricValue+" shidt"+shiftMode);
 					System.out.println("permission for the employee role is............"+permission);
 				if(permission!=null) {
 			    List<String> aList= Arrays.asList(permission.split(","));
